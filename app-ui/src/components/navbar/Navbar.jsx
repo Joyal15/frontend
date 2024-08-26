@@ -3,6 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 
 function Navbar() {
+  useEffect(()=>{
+    let inputtt = document.querySelector(".inputt")
+    let btun = document.querySelector(".btun")
+    inputtt.addEventListener("focus",()=>{btun.style.height = "50px";btun.style.top ="-2px";btun.style.width ="125px";})
+    inputtt.addEventListener("blur",()=>{btun.style.height = "37px";btun.style.top ="0px";btun.style.width ="100px";})
+
+  },[])
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,10 +36,15 @@ function Navbar() {
 
   return (
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
-      <div className="container">
+      <div className="container relative">
+        <div id="searchcont" className="absolute left-[50%] h-fit translate-x-[-50%]">
+        <input type="text" className="inputt w-[300px] z-50 px-5 py-3 h-[35px] rounded-xl relative text-black" placeholder="Search Gig"></input>
+        <button className="px-5 btun py-1 h-[37px] w-[100px] translate-x-[-20px] rounded-xl relative z-[100] bg-[#8256bc]">Search</button>
+
+        </div>
         <div className="logo">
           <Link className="link" to="/">
-            <span className="text">liverr</span>
+            <span className="text">Gigमित्र</span>
           </Link>
           <span className="dot">.</span>
         </div>
