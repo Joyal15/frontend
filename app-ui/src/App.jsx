@@ -14,8 +14,47 @@ import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
 import MyGigs from "./pages/myGigs/MyGigs";
 import "./App.css";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function App() {
+  
+   gsap.registerPlugin(ScrollTrigger)
+    useGSAP(()=>{
+      gsap.to('.uuiii', {
+        scrollTrigger: {
+          trigger: ".home",
+          scrub: true,
+          start: "10% top",
+          end: "bottom bottom",
+      },
+      height:70+"%"
+      });
+      gsap.to('#contvid', {
+        scrollTrigger: {
+          trigger: ".viddabba",
+          scrub: true,
+          start: "-30% top",
+          end: "bottom bottom",
+      },
+      backgroundColor:"rgb(58 16 120)"
+      });
+      gsap.to('.vds', {
+        scrollTrigger: {
+          trigger: ".viddabba",
+          scrub: true,
+          start: "-40% top",
+          end: "bottom bottom",
+      },
+      position:"absolute",
+      top:0+"%",
+      border:"1px solid black",
+      width:"75vw"
+      });
+        
+    },[])
+
   const Layout = () => {
     return (
       <div className="app">

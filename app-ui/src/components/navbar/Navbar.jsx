@@ -95,7 +95,7 @@ function Navbar() {
       {(active || pathname !== "/") && (
         <>
           <hr />
-          <div className="menu">
+          {/* <div className="menu">
             <Link className="link menuLink" to="/">
               Graphics & Design
             </Link>
@@ -123,7 +123,7 @@ function Navbar() {
             <Link className="link menuLink" to="/">
               Lifestyle
             </Link>
-          </div>
+          </div> */}
           <hr />
         </>
       )}

@@ -103,7 +103,7 @@ function Featured() {
     
   return (
     <div className="featured  flex items-start justify-center bg-[#3A1078] w-[100vw] p-0 m-0 h-[70vh]" >
-      <div className="container uuiii relative  overflow-hidden  h-full w-full  flex ">
+      <div className="container uuiii z-50 relative  overflow-hidden  h-full w-full  flex ">
         <div id="slidess1"  className=" slds  left-0 h-full w-full relative ">
         <div className="left-[8%] left top-1/2 translate-y-[-50%] text-7xl absolute w-1/2">
           <h1>

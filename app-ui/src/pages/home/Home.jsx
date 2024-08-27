@@ -7,9 +7,15 @@ import CatCard from "../../components/catCard/CatCard";
 import ProjectCard from "../../components/projectCard/ProjectCard";
 import { cards, projects } from "../../data";
 
+
 function Home() {
+  
+ 
+
+
+  
   return (
-    <div className="home">
+    <div className="home relative">
       <Featured />
       {/* <TrustedBy /> */}
       {/* <Slide slidesToShow={5} arrowsScroll={5}>
@@ -17,12 +23,14 @@ function Home() {
           <CatCard key={card.id} card={card} />
         ))}
       </Slide> */}
-      <div className="features">
-        <div className="container">
-          <div className="item">
-            <video  src="./img/video.mp4" controls />
+      <div id="contvid" className="w-screen h-[200vh]">
+      <div className="features sticky top-[50px] w-[100vw] h-screen  viddabba">
+        <div className="container w-full h-full relative ">
+          <div className="item  w-full h-full relative">
+            <video className="vds absolute w-[50%] rounded-3xl" src="./img/videoss.mp4" controls  loop/>
           </div>
         </div>
+      </div>
       </div>
       <div className="explore">
         <div className="container">
