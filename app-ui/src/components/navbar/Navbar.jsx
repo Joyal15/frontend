@@ -16,7 +16,7 @@ function Navbar() {
   const { pathname } = useLocation();
 
   const isActive = () => {
-    window.scrollY > 0 ? setActive(true) : setActive(false);
+    window.scrollY > 700 ? setActive(true) : setActive(false);
   };
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Navbar() {
 
   const currentUser = {
     id: 1,
-    username: "Anna",
+    username: "Aman",
     isSeller: true,
   };
 
@@ -46,10 +46,10 @@ function Navbar() {
           <Link className="link" to="/">
             <span className="text">Gigमित्र</span>
           </Link>
-          <span className="dot">.</span>
+          <span className="dot ">.</span>
         </div>
         <div className="links">
-          <span>Liverr Business</span>
+          <span>Courses</span>
           <span>Explore</span>
           <span>English</span>
           {!currentUser?.isSeller && <span>Become a Seller</span>}
@@ -94,37 +94,6 @@ function Navbar() {
       </div>
       {(active || pathname !== "/") && (
         <>
-          <hr />
-          {/* <div className="menu">
-            <Link className="link menuLink" to="/">
-              Graphics & Design
-            </Link>
-            <Link className="link menuLink" to="/">
-              Video & Animation
-            </Link>
-            <Link className="link menuLink" to="/">
-              Writing & Translation
-            </Link>
-            <Link className="link menuLink" to="/">
-              AI Services
-            </Link>
-            <Link className="link menuLink" to="/">
-              Digital Marketing
-            </Link>
-            <Link className="link menuLink" to="/">
-              Music & Audio
-            </Link>
-            <Link className="link menuLink" to="/">
-              Programming & Tech
-            </Link>
-            <Link className="link menuLink" to="/">
-              Business
-            </Link>
-            <Link className="link menuLink" to="/">
-              Lifestyle
-            </Link>
-          </div> */}
-          <hr />
         </>
       )}
     </div>

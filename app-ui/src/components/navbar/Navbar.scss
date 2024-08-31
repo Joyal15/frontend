@@ -10,13 +10,13 @@
   transition: 0.5s all ease;
 
   &.active {
-    background-color: white;
-    color: black;
+    background-color: #1B1212;
+    color: white;
 
     button {
       background-color: white !important;
-      color: #1dbf73 !important;
-      border: 1px solid #1dbf73 !important;
+      color: #3A1078 !important;
+      border: 1px solid #3A1078 !important;
     }
   }
 
@@ -31,12 +31,10 @@
       font-size: 34px;
       font-weight: bold;
 
-      .text {
-      }
-
+  
       .dot {
         font-weight: bold;
-        color: #1dbf73;
+        color: rgb(107, 24, 231);
       }
     }
     .links {

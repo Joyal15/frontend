@@ -68,7 +68,7 @@ function Featured() {
       
       sld1.style.left = "-100%";
       sld2.style.left = "0";
-    },4000) 
+    },5000) 
     setTimeout(function () { 
       
       sld1.style.top = "100%";
@@ -111,7 +111,7 @@ function Featured() {
           </h1>
         </div>
         <div className="absolute right-0 w-1/2">
-          <img className="w-[1200px] iioo" src="./img/man.png" alt="" />
+          <img className="w-[1200px] iioo" src="./img/newman.png" alt="" />
         </div>
         </div>
         <div id="sld2main" className="slds absolute w-full h-full left-[100%]">
@@ -122,7 +122,7 @@ function Featured() {
           </h1>
         </div>
         <div className="absolute right-0 w-1/2">
-          <img className="w-[2000px] iioo " src="./img/newman.png" alt="" />
+          <img className="w-[2000px] iioo " src="./img/redman.png" alt="" />
         </div>
         </div>
         </div>

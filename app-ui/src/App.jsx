@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import Faq from "./components/Faqs/Faq";
 import Home from "./pages/home/Home";
 import Gigs from "./pages/gigs/Gigs";
 import Gig from "./pages/gig/Gig";
@@ -25,7 +26,7 @@ function App() {
       gsap.to('.uuiii', {
         scrollTrigger: {
           trigger: ".home",
-          scrub: true,
+          scrub: 0.1,
           start: "10% top",
           end: "bottom bottom",
       },
@@ -34,24 +35,54 @@ function App() {
       gsap.to('#contvid', {
         scrollTrigger: {
           trigger: ".viddabba",
-          scrub: true,
+          scrub: 0.1,
           start: "-30% top",
           end: "bottom bottom",
       },
-      backgroundColor:"rgb(58 16 120)"
+      backgroundColor:"#1B1212"
       });
       gsap.to('.vds', {
         scrollTrigger: {
           trigger: ".viddabba",
-          scrub: true,
+          scrub: 0.1,
           start: "-40% top",
           end: "bottom bottom",
       },
       position:"absolute",
-      top:0+"%",
-      border:"1px solid black",
-      width:"75vw"
+      top:20+"%",
+      left:20+"%",
+      border:"2px solid rgb(58 16 120)",
+      width:"60%"
       });
+      gsap.to('#traitextMaincont  ', {
+        scrollTrigger: {
+          trigger: ".viddabba",
+          scrub: 0.1,
+          start: "-20% top",
+          end: "bottom 95%",
+      },
+      opacity:1
+      });
+      gsap.to('#mainslider', {
+        scrollTrigger: {
+          trigger: ".viddabba",
+          scrub: 0.1,
+          start: "10%  top ",
+          end: "60% top",
+      },
+      y:280,
+      ease: "steps(2)",
+    });
+    gsap.to('#carouselname', {
+      scrollTrigger: {
+        trigger: ".viddabba",
+        scrub: 0.1,
+        start: "102% top",
+        end: "120% top",
+      },
+      opacity:1,
+      y:-10
+    });
         
     },[])
 
@@ -60,7 +91,6 @@ function App() {
       <div className="app">
         <Navbar />
         <Outlet />
-        <Footer />
       </div>
     );
   };
@@ -73,6 +103,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/Faq",
+          element: <Faq />,
         },
         {
           path: "/gigs",
