@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./courses.css"
 
 function Courses() {
+
+    const [abool, setAbool] = React.useState(false);
+
+    useEffect(() => {
+        if (abool) {
+            document.querySelectorAll(".gallery-item").forEach((q)=>{q.style.filter = "grayscale(1)"})
+            document.querySelectorAll(".gallery-item").forEach((q)=>{q.addEventListener("mousemove",()=>{q.style.filter = "grayscale(0)";})})
+            document.querySelectorAll(".gallery-item").forEach((q)=>{q.addEventListener("mouseleave",()=>{q.style.filter = "grayscale(1)"})})
+        }else{
+
+            document.querySelectorAll(".gallery-item").forEach((q)=>{q.style.filter = "grayscale(0)"})
+        }
+    }, [abool])
+    
+    useEffect(()=>{
+        document.querySelectorAll(".gallery-item").forEach((q)=>{q.addEventListener("mouseenter",()=>{setAbool(true);})})
+        document.querySelectorAll(".gallery-item").forEach((q)=>{q.addEventListener("mouseleave",()=>{setAbool(false);})})
+    },[])
+
+
+
   return (
-    <div class="coursesmain main w-screen h-[92vh]">
+    <div class="coursesmain main w-screen h-[90.8vh]">
     <div class="gallery-item">
       <h3>Digital Marketing</h3>
       <a href="https://www.udemy.com/course/free-digital-marketing-basics-course/">

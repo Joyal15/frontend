@@ -5,14 +5,9 @@ body {
       "Lucida Sans", Arial, sans-serif;
   }
   .coursesmain{
-    background: #8c00ff;
+    background: black;
     transition: 0.3s all ease-out;
   }
-
-
-
-  
-  
   
   .main {
     margin-left: auto;
@@ -25,21 +20,24 @@ body {
   }
   
   .gallery-item {
+    transition: 0.3s all ease-out;
     text-align: center;
     margin-bottom: 30px;
-    padding: 0px;
-    width: 300px;
+    width: 400px;
     background-color: #f2f2f2;
     position: relative;
-    height: 400px;
-    border-radius: 100px;
-    box-shadow: 0px 0px 30px black;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: #6b18e7 1px solid;
+    box-shadow: 0px 0px 50px #6b18e7;
+    text-align: center;
+
   }
   
   .gallery-item img {
     top: 0;
     left: 0;
-    border-radius: 70px;
       width:100%;
       height:100%;
       object-fit:cover;
@@ -48,25 +46,35 @@ body {
   }
   
   .gallery-item h3 {
+    transform: translateY(0px);
     color: #fff;
+    font-weight: 900;
+    text-shadow: 2px 2px black;
     font-size: 18px;
-  top:353px;
+    width: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    bottom: 0px;
       z-index:2;
-      position:relative;
+      position:absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.1s all ease-out;
   }
 
   .gallery-item:hover {
+    h3{
+      transform: translateY(-50px);
 
-    width: 350px;
-    height: 450px;
+    }
+
+    width: 450px;
+    height: 300px;
   }
 
   .gallery-item h3:hover {
-    font-weight: bolder;
-    font-size: 30px;
-    color: rgb(203, 255, 80);
-    padding: auto;
-    cursor: pointer;
+    font-size: 20px;
+    
   }
   
   .container{
@@ -81,6 +89,3 @@ body {
   }
   
  
-  .gallery-item {
-    box-shadow: 10px 10px 10px black;
-  }
