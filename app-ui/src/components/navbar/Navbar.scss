@@ -10,6 +10,9 @@
   transition: 0.5s all ease;
 
   &.active {
+    input{
+      background-color: #3a1078;
+    }
     background-color: #1B1212;
     color: white;
 

@@ -6,7 +6,7 @@ function Navbar() {
   useEffect(()=>{
     let inputtt = document.querySelector(".inputt")
     let btun = document.querySelector(".btun")
-    inputtt.addEventListener("focus",()=>{btun.style.height = "50px";btun.style.top ="-2px";btun.style.width ="125px";})
+    inputtt.addEventListener("focus",()=>{btun.style.height = "50px";btun.style.top ="0px";btun.style.width ="125px";})
     inputtt.addEventListener("blur",()=>{btun.style.height = "37px";btun.style.top ="0px";btun.style.width ="100px";})
 
   },[])
@@ -39,7 +39,7 @@ function Navbar() {
       <div className="container relative">
         <div id="searchcont" className="absolute left-[50%] h-fit translate-x-[-50%]">
         <input type="text" className="inputt w-[300px] z-50 px-5 py-3 h-[35px] rounded-xl relative text-black" placeholder="Search Gig"></input>
-        <button className="px-5 btun py-1 h-[37px] w-[100px] translate-x-[-20px] rounded-xl relative z-[100] bg-[#8256bc]">Search</button>
+        <button className="px-5 btun py-1 h-[37px] w-[100px] translate-x-[-20px] translate-y-[-2px] rounded-xl relative z-[100] bg-[#8256bc]">Search</button>
 
         </div>
         <div className="logo">
@@ -49,7 +49,10 @@ function Navbar() {
           <span className="dot ">.</span>
         </div>
         <div className="links">
-          <span>Courses</span>
+          <span>
+            <Link to="/courses">
+            Courses
+            </Link></span>
           <span>Explore</span>
           <span>English</span>
           {!currentUser?.isSeller && <span>Become a Seller</span>}

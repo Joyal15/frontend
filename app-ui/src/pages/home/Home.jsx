@@ -50,7 +50,7 @@ function Home() {
         ))}
       </Slide> */}
       <div id="contvid" className="w-screen h-[200vh]">
-      <div className="features sticky top-[50px] w-[100vw] h-screen  viddabba">
+      <div className="features sticky top-[50px] w-[100vw] h-screen  overflow-hidden viddabba">
         <div className="container w-full h-full relative ">
           <div className="item  w-full h-full relative">
             <div id="traitextcont" className="absolute  h-[150px]  translate-y-[0px] text-[#1B1212] tte right-0 top-[25%] translate-x-[100px]">

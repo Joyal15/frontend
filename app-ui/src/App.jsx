@@ -1,3 +1,4 @@
+import Courses from "./pages/Courses/Courses";
 import "./app.scss";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React from "react";
@@ -60,6 +61,7 @@ function App() {
           scrub: 0.1,
           start: "-20% top",
           end: "bottom 95%",
+          
       },
       opacity:1
       });
@@ -69,6 +71,7 @@ function App() {
           scrub: 0.1,
           start: "10%  top ",
           end: "60% top",
+          
       },
       y:280,
       ease: "steps(2)",
@@ -81,7 +84,22 @@ function App() {
         end: "120% top",
       },
       opacity:1,
-      y:-10
+      y:0
+    });
+    gsap.from('.faqtrans', {
+      scrollTrigger: {
+        trigger: "#faq",
+        scrub: 0.1,
+        start: "0% 50%",
+        end: "30% 50%"
+      },
+      stagger:0.1+"s",
+      opacity:0
+    });
+    gsap.from('.gallery-item', {
+      y:100,
+      duration:1,
+      opacity:0
     });
         
     },[])
@@ -119,6 +137,10 @@ function App() {
         {
           path: "/orders",
           element: <Orders />,
+        },
+        {
+          path: "/Courses",
+          element: <Courses />,
         },
         {
           path: "/messages",
